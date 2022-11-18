@@ -1,6 +1,6 @@
 namespace Sovcombank.FinancialTrading.EventSourcing;
 
-internal interface IInternalEventHandler
+public interface IInternalEventHandler
 {
-    
+    void Handle(IEvent @event);
 }
