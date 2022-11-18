@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "items", "items", "{F853621B-5860-4E17-A16E-533473579865}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sovcombank.FinancialTrading.Domain", "src\Sovcombank.FinancialTrading.Domain\Sovcombank.FinancialTrading.Domain.csproj", "{D9606E2D-280E-4C04-BEA4-0308F9579BBF}"
