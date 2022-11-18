@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sovcombank.FinancialTrading
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sovcombank.FinancialTrading.Domain.Tests", "tests\Sovcombank.FinancialTrading.Domain.Tests\Sovcombank.FinancialTrading.Domain.Tests.csproj", "{3331D4F3-2F33-4BB6-A873-A67D4E3B3249}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sovcombank.FinancialTrading.EventSourcing", "src\Sovcombank.FinancialTrading.EventSourcing\Sovcombank.FinancialTrading.EventSourcing.csproj", "{51FD5486-CA1F-4C1D-BC27-4E526FABC85B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D9606E2D-280E-4C04-BEA4-0308F9579BBF} = {11AFD1B4-7FCB-464A-AF66-0F282241F368}
 		{3331D4F3-2F33-4BB6-A873-A67D4E3B3249} = {5BC897C6-2DDB-4539-8E77-28587E801E59}
+		{51FD5486-CA1F-4C1D-BC27-4E526FABC85B} = {11AFD1B4-7FCB-464A-AF66-0F282241F368}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D9606E2D-280E-4C04-BEA4-0308F9579BBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -38,5 +41,9 @@ Global
 		{3331D4F3-2F33-4BB6-A873-A67D4E3B3249}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3331D4F3-2F33-4BB6-A873-A67D4E3B3249}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3331D4F3-2F33-4BB6-A873-A67D4E3B3249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51FD5486-CA1F-4C1D-BC27-4E526FABC85B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51FD5486-CA1F-4C1D-BC27-4E526FABC85B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51FD5486-CA1F-4C1D-BC27-4E526FABC85B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51FD5486-CA1F-4C1D-BC27-4E526FABC85B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
