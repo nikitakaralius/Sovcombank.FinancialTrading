@@ -35,4 +35,29 @@ public abstract class UserEvent
 
         public string Reason { get; init; } = "";
     }
+
+    public class UserAccountReplenished : UserEvent
+    {
+        public Guid Id { get; init; }
+
+        public int CurrencyCode { get; init; }
+
+        public decimal Replenishment { get; init; }
+    }
+
+    public class UserAccountWithdrew : UserEvent
+    {
+        public Guid Id { get; init; }
+
+        public int CurrencyCode { get; init; }
+
+        public decimal Withdraw { get; init; }
+    }
+
+    public class UserCreatedNewAccount : UserEvent
+    {
+        public Guid Id { get; init; }
+
+        public int CurrencyCode { get; init; }
+    }
 }
