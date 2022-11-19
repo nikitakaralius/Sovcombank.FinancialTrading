@@ -1,8 +1,8 @@
 namespace Sovcombank.FinancialTrading.Domain.UserProfile;
 
-public static class UserEvents
+public abstract class UserEvent
 {
-    public class UserRegistered
+    public class UserRegistered : UserEvent
     {
         public Guid Id { get; init; }
 
@@ -17,14 +17,14 @@ public static class UserEvents
         public Passport Passport { get; init; } = null!;
     }
 
-    public class UserVerified
+    public class UserVerified : UserEvent
     {
         public Guid Id { get; init; }
 
         public Guid VerifiedBy { get; init; }
     }
 
-    public class UserVerificationRejected
+    public class UserVerificationRejected : UserEvent
     {
         public Guid Id { get; init; }
 
@@ -33,7 +33,7 @@ public static class UserEvents
         public string Reason { get; init; } = "";
     }
 
-    public class UserBanned
+    public class UserBanned : UserEvent
     {
         public Guid Id { get; init; }
 
