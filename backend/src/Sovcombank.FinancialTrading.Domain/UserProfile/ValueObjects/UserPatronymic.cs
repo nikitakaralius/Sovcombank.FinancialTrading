@@ -10,11 +10,9 @@ public sealed record UserPatronymic
 
     private UserPatronymic(String50 value) => Value = value;
 
-    public UserPatronymic FromString(string patronymic)
+    public static UserPatronymic FromString(string? patronymic)
     {
-        patronymic = patronymic.Trim();
-
-        return patronymic.Length == 0
+        return string.IsNullOrEmpty(patronymic)
             ? None
             : new UserPatronymic(String50.Create(patronymic));
     }

@@ -8,7 +8,7 @@ public sealed record UserLastname
 
     private UserLastname(String50 value) => Value = value;
 
-    public UserLastname FromString(string lastname)
+    public static UserLastname FromString(string lastname)
     {
         lastname = lastname.Trim();
 
