@@ -44,18 +44,13 @@ public static class UserTransformations
     {
         var id = UserId.FromGuid(@event.Id);
 
-        var fullname = new FullUserName(
-            UserFirstname.FromString(@event.Firstname),
-            UserLastname.FromString(@event.Lastname),
-            UserPatronymic.FromString(@event.Patronymic));
-
         var email = EmailAddress.FromString(@event.Email);
 
-        return new(id, fullname, email);
+        return new(id, email);
     }
 
     private static UserProfile.Verified Apply(UserProfile.Unverified profile) =>
-        new(profile.Id, profile.Username, profile.Email);
+        new(profile.Id, profile.Email);
 
     private static UserProfile.Banned Apply(UserProfile.Verified profile, UserEvent.UserBanned @event) =>
         new(profile.Id, UserId.FromGuid(@event.BannedBy), @event.Reason);
