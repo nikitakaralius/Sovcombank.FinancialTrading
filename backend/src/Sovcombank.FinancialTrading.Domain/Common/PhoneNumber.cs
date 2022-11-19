@@ -19,4 +19,6 @@ public sealed record PhoneNumber
 
         return new PhoneNumber(phoneNumber);
     }
+
+    public static implicit operator string(PhoneNumber phoneNumber) => phoneNumber.Value;
 }
