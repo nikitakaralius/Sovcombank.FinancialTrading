@@ -11,4 +11,8 @@ public sealed record Currency
     public string Name { get; init; } = "";
 
     public decimal Value { get; init; }
+
+    public bool InUse { get; init; } = true;
+
+    public static Currency None => new() {InUse = false};
 };
