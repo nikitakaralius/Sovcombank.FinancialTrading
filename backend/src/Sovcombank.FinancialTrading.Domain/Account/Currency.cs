@@ -7,4 +7,6 @@ public sealed record Currency
     public bool InUse { get; init; } = true;
 
     public static Currency None => new() {InUse = false};
+
+    public static Currency Ruble => new() {NumericCode = 643};
 };
