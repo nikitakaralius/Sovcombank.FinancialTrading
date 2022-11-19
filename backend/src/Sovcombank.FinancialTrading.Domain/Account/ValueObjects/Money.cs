@@ -7,7 +7,7 @@ public sealed record Money
     public readonly decimal Amount;
     public readonly Currency Currency;
 
-    private Money(decimal amount, Currency currency)
+    internal Money(decimal amount, Currency currency)
     {
         Amount = amount;
         Currency = currency;
