@@ -43,14 +43,14 @@ public static class UserTransformations
     public static UserProfile.Unverified Create(UserEvent.UserRegistered @event)
     {
         var id = UserId.FromGuid(@event.Id);
-
         var email = EmailAddress.FromString(@event.Email);
+        var phoneNumber = PhoneNumber.FromString(@event.PhoneNumber);
 
-        return new(id, email);
+        return new(id, email, phoneNumber);
     }
 
     private static UserProfile.Verified Apply(UserProfile.Unverified profile) =>
-        new(profile.Id, profile.Email);
+        new(profile.Id, profile.Email, profile.PhoneNumber);
 
     private static UserProfile.Banned Apply(UserProfile.Verified profile, UserEvent.UserBanned @event) =>
         new(profile.Id, UserId.FromGuid(@event.BannedBy), @event.Reason);
