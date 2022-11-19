@@ -6,6 +6,10 @@ public sealed record UserId
 
     private UserId(Guid value) => Value = value;
 
+    private UserId() { }
+
+    public static readonly UserId None = new();
+
     public static UserId FromGuid(Guid id)
     {
         if (id == default)
