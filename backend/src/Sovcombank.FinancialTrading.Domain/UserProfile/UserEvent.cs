@@ -13,8 +13,6 @@ public abstract class UserEvent
         public string? Patronymic { get; init; }
 
         public string Email { get; init; } = "";
-
-        public Passport Passport { get; init; } = null!;
     }
 
     public class UserVerified : UserEvent

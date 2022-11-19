@@ -50,13 +50,12 @@ public static class UserTransformations
             UserPatronymic.FromString(@event.Patronymic));
 
         var email = EmailAddress.FromString(@event.Email);
-        var passport = @event.Passport;
 
-        return new(id, fullname, email, passport);
+        return new(id, fullname, email);
     }
 
     private static UserProfile.Verified Apply(UserProfile.Unverified profile) =>
-        new(profile.Id, profile.Username, profile.Email, profile.Passport);
+        new(profile.Id, profile.Username, profile.Email);
 
     private static UserProfile.Banned Apply(UserProfile.Verified profile, UserEvent.UserBanned @event) =>
         new(profile.Id, UserId.FromGuid(@event.BannedBy), @event.Reason);
