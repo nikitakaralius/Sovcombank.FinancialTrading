@@ -53,10 +53,7 @@ public static class UserTransformations
 
     private static UserProfile.Verified Apply(UserProfile.Unverified profile)
     {
-        var rubleCurrency = new Currency
-        {
-            NumericCode = 643
-        };
+        var rubleCurrency = Currency.Ruble;
 
         var money = new Money(0, rubleCurrency);
         var account = new CurrencyAccount(money);
