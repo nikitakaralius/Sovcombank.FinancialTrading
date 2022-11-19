@@ -13,17 +13,7 @@ public sealed record Money
         Currency = currency;
     }
 
-    public static Money FromDecimal(decimal amount, int currencyCode, ICurrencyLookup currencyLookup)
-    {
-        var currency = currencyLookup.FindCurrency(currencyCode);
-
-        if (currency.InUse == false)
-        {
-            throw new ArgumentException($"Currency {currencyCode} is not valid");
-        }
-
-        return new Money(amount, currency);
-    }
+    public static Money FromDecimal(decimal amount, Currency currency) => new(amount, currency);
 
     public Money Add(Money summand)
     {
