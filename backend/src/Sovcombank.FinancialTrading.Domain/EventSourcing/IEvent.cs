@@ -2,4 +2,4 @@ namespace Sovcombank.FinancialTrading.Domain.EventSourcing;
 
 public interface IEvent { }
 
-public interface IEvent<out T> { }
+public interface IEvent<out T> : IEvent { }
