@@ -16,7 +16,10 @@ public static class UserTransformations
 
                 throw new ArgumentException("Cannot ban not verified user");
             },
-            UserEvent.UserRegistered registered => () => { return Create(registered); },
+            UserEvent.UserRegistered registered => () =>
+            {
+                return Create(registered);
+            },
             UserEvent.UserVerificationRejected rejected => () =>
             {
                 if (profile is UserProfile.Unverified unverified)
