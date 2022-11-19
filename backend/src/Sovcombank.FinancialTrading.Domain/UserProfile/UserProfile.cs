@@ -5,9 +5,9 @@ namespace Sovcombank.FinancialTrading.Domain.UserProfile;
 
 public abstract record UserProfile
 {
-    public record Unverified(UserId Id, EmailAddress Email) : UserProfile;
+    public record Unverified(UserId Id, EmailAddress Email, PhoneNumber PhoneNumber) : UserProfile;
 
-    public record Verified(UserId Id, EmailAddress Email) : UserProfile;
+    public record Verified(UserId Id, EmailAddress Email, PhoneNumber PhoneNumber) : UserProfile;
 
     public record Rejected(UserId Id, UserId RejectedBy, string Reason) : UserProfile;
 
