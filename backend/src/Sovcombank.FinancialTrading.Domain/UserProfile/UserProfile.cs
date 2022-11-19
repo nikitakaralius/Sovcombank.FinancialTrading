@@ -1,3 +1,4 @@
+using Sovcombank.FinancialTrading.Domain.Account;
 using Sovcombank.FinancialTrading.Domain.Common;
 using Sovcombank.FinancialTrading.Domain.UserProfile.ValueObjects;
 
@@ -7,7 +8,11 @@ public abstract record UserProfile
 {
     public record Unverified(UserId Id, EmailAddress Email, PhoneNumber PhoneNumber) : UserProfile;
 
-    public record Verified(UserId Id, EmailAddress Email, PhoneNumber PhoneNumber) : UserProfile;
+    public record Verified(
+        UserId Id,
+        EmailAddress Email,
+        PhoneNumber PhoneNumber,
+        IDictionary<Currency, CurrencyAccount> Accounts) : UserProfile;
 
     public record Rejected(UserId Id, UserId RejectedBy, string Reason) : UserProfile;
 
