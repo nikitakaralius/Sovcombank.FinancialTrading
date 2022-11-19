@@ -1,3 +1,5 @@
+using Sovcombank.FinancialTrading.Domain.Account;
+using Sovcombank.FinancialTrading.Domain.Account.ValueObjects;
 using Sovcombank.FinancialTrading.Domain.Common;
 using Sovcombank.FinancialTrading.Domain.UserProfile.ValueObjects;
 
@@ -49,8 +51,23 @@ public static class UserTransformations
         return new(id, email, phoneNumber);
     }
 
-    private static UserProfile.Verified Apply(UserProfile.Unverified profile) =>
-        new(profile.Id, profile.Email, profile.PhoneNumber);
+    private static UserProfile.Verified Apply(UserProfile.Unverified profile)
+    {
+        var rubleCurrency = new Currency
+        {
+            NumericCode = 643
+        };
+
+        var money = new Money(0, rubleCurrency);
+        var account = new CurrencyAccount(money);
+
+        Dictionary<Currency, CurrencyAccount> accounts = new()
+        {
+            {rubleCurrency, account}
+        };
+
+        return new(profile.Id, profile.Email, profile.PhoneNumber, accounts);
+    }
 
     private static UserProfile.Banned Apply(UserProfile.Verified profile, UserEvent.UserBanned @event) =>
         new(profile.Id, UserId.FromGuid(@event.BannedBy), @event.Reason);
