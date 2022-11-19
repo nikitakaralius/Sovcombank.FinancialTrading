@@ -1,6 +1,8 @@
+using Sovcombank.FinancialTrading.Domain.EventSourcing;
+
 namespace Sovcombank.FinancialTrading.Domain.UserProfile;
 
-public abstract class UserEvent
+public abstract class UserEvent : IEvent<UserProfile>
 {
     public class UserRegistered : UserEvent
     {
@@ -51,10 +53,10 @@ public abstract class UserEvent
 
         public int CurrencyCode { get; init; }
 
-        public decimal Withdraw { get; init; }
+        public decimal Withdrawal { get; init; }
     }
 
-    public class UserCreatedNewAccount : UserEvent
+    public class UserOpenedCurrencyAccount : UserEvent
     {
         public Guid Id { get; init; }
 
