@@ -9,7 +9,9 @@ public abstract record UserProfile
 
     public record Verified(UserId Id, FullUserName Username, EmailAddress Email, Passport Passport) : UserProfile;
 
-    public record Banned(UserId Id, UserId BannedBy) : UserProfile;
+    public record Rejected(UserId Id, UserId RejectedBy, string Reason) : UserProfile;
+
+    public record Banned(UserId Id, UserId BannedBy, string Reason) : UserProfile;
 
     public record Administrator(UserId Id, EmailAddress Email) : UserProfile;
 }
