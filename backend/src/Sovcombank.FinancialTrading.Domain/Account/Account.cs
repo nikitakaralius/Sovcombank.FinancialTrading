@@ -5,8 +5,13 @@ namespace Sovcombank.FinancialTrading.Domain.Account;
 public sealed class Account : IEquatable<Account>
 {
     public readonly Currency Currency;
-
     public readonly Money Amount;
+
+    public Account(Currency currency, Money amount)
+    {
+        Currency = currency;
+        Amount = amount;
+    }
 
     public bool Equals(Account? other)
     {
