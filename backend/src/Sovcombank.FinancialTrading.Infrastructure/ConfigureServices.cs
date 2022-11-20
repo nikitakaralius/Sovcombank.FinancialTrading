@@ -1,10 +1,10 @@
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Sovcombank.FinancialTrading.Infrastructure.Extensions;
+namespace Sovcombank.FinancialTrading.Infrastructure;
 
-public static class DependencyInjection
+public static class ConfigureServices
 {
-    public static IServiceCollection AddInfrastructure(
+    public static IServiceCollection AddInfrastructureServices(
         this IServiceCollection services,
         Action<EventStoreOptions> configure)
     {
