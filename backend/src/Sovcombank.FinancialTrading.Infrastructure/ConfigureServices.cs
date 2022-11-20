@@ -28,7 +28,8 @@ public static class ConfigureServices
 
         services.AddDbContext<ApplicationDbContext>(o =>
         {
-            o.UseNpgsql(options.PostgresConnectionString);
+            o.UseNpgsql(options.PostgresConnectionString,
+                        builder => builder.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName));
         });
 
         services.AddDefaultIdentity<ApplicationUser>()
