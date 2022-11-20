@@ -1,5 +1,4 @@
 using System.Reflection;
-using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Sovcombank.FinancialTrading.Application.Behaviors;
 
