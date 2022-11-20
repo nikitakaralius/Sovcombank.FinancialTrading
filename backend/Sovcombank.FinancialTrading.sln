@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "items", "items", "{F853621B
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		docker-compose.yml = docker-compose.yml
+		init.sql = init.sql
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sovcombank.FinancialTrading.Domain", "src\Sovcombank.FinancialTrading.Domain\Sovcombank.FinancialTrading.Domain.csproj", "{D9606E2D-280E-4C04-BEA4-0308F9579BBF}"
@@ -20,6 +21,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sovcombank.FinancialTrading.Infrastructure", "src\Sovcombank.FinancialTrading.Infrastructure\Sovcombank.FinancialTrading.Infrastructure.csproj", "{A93D58DE-8C23-41B9-A14F-191E41FC1899}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sovcombank.FinancialTrading.Application", "src\Sovcombank.FinancialTrading.Application\Sovcombank.FinancialTrading.Application.csproj", "{080FC75B-DFE5-47E4-AB19-C3600F1BC00E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sovcombank.FinancialTrading.WebApi", "src\Sovcombank.FinancialTrading.WebApi\Sovcombank.FinancialTrading.WebApi.csproj", "{9165C5BC-CF1C-42C6-A18E-DCF6A031251B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +37,7 @@ Global
 		{3331D4F3-2F33-4BB6-A873-A67D4E3B3249} = {5BC897C6-2DDB-4539-8E77-28587E801E59}
 		{A93D58DE-8C23-41B9-A14F-191E41FC1899} = {11AFD1B4-7FCB-464A-AF66-0F282241F368}
 		{080FC75B-DFE5-47E4-AB19-C3600F1BC00E} = {11AFD1B4-7FCB-464A-AF66-0F282241F368}
+		{9165C5BC-CF1C-42C6-A18E-DCF6A031251B} = {11AFD1B4-7FCB-464A-AF66-0F282241F368}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D9606E2D-280E-4C04-BEA4-0308F9579BBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -52,5 +56,9 @@ Global
 		{080FC75B-DFE5-47E4-AB19-C3600F1BC00E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{080FC75B-DFE5-47E4-AB19-C3600F1BC00E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{080FC75B-DFE5-47E4-AB19-C3600F1BC00E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9165C5BC-CF1C-42C6-A18E-DCF6A031251B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9165C5BC-CF1C-42C6-A18E-DCF6A031251B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9165C5BC-CF1C-42C6-A18E-DCF6A031251B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9165C5BC-CF1C-42C6-A18E-DCF6A031251B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
