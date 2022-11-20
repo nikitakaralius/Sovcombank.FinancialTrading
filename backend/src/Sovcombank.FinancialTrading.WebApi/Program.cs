@@ -1,5 +1,6 @@
 using Sovcombank.FinancialTrading.Application;
 using Sovcombank.FinancialTrading.Infrastructure;
+using Sovcombank.FinancialTrading.WebApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,7 @@ builder.Services.AddInfrastructureServices(options =>
     options.EsConnectionName = builder.Environment.ApplicationName;
     options.PostgresConnectionString = builder.Configuration.GetConnectionString("Postgres")!;
 });
+builder.Services.AddWebApiServices();
 
 var app = builder.Build();
 
@@ -24,10 +26,14 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseRouting();
+
 app.UseAuthentication();
 app.UseIdentityServer();
 app.UseAuthorization();
 
-app.MapControllers();
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller}/{action=Index}/{id?}");
 
 app.Run();
