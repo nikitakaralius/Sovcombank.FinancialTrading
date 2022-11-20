@@ -54,7 +54,7 @@ internal sealed class AuthorizationBehaviour<TRequest, TResponse>
 
         foreach (string policy in polices)
         {
-            authorized = await _identityService.AuthorizeAsync(_currentUserService.UserId!.Value, policy);
+            authorized = await _identityService.AuthorizeAsync(_currentUserService.UserId, policy);
 
             if (authorized == false)
             {
@@ -80,7 +80,7 @@ internal sealed class AuthorizationBehaviour<TRequest, TResponse>
             foreach (string role in roles)
             {
                 bool isInRole = await _identityService.IsIsInRoleAsync(
-                    _currentUserService.UserId!.Value, role.Trim());
+                    _currentUserService.UserId!, role.Trim());
 
                 if (isInRole)
                 {

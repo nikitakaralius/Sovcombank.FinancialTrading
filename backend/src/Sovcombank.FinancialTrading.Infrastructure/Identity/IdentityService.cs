@@ -22,14 +22,14 @@ internal sealed class IdentityService : IIdentityService
         _authorizationService = authorizationService;
     }
 
-    public async Task<string?> GetUserNameAsync(Guid userId)
+    public async Task<string?> GetUserNameAsync(string userId)
     {
         var user = await FindUserAsync(userId);
 
         return user?.UserName;
     }
 
-    public async Task<(Result Result, Guid UserId)> CreateUserAsync(string email, string phoneNumber, string password)
+    public async Task<(Result Result, string UserId)> CreateUserAsync(string email, string phoneNumber, string password)
     {
         var user = new ApplicationUser
         {
@@ -43,14 +43,14 @@ internal sealed class IdentityService : IIdentityService
         return (result.ToApplicationResult(), user.Id);
     }
 
-    public async Task<bool> IsIsInRoleAsync(Guid userId, string role)
+    public async Task<bool> IsIsInRoleAsync(string userId, string role)
     {
         var user = await FindUserAsync(userId);
 
         return user is not null && await _userManager.IsInRoleAsync(user, role);
     }
 
-    public async Task<bool> AuthorizeAsync(Guid userId, string policyName)
+    public async Task<bool> AuthorizeAsync(string userId, string policyName)
     {
         var user = await FindUserAsync(userId);
 
@@ -63,7 +63,7 @@ internal sealed class IdentityService : IIdentityService
         return result.Succeeded;
     }
 
-    public async Task<Result> DeleteUserAsync(Guid userId)
+    public async Task<Result> DeleteUserAsync(string userId)
     {
         var user = await FindUserAsync(userId);
 
@@ -77,6 +77,6 @@ internal sealed class IdentityService : IIdentityService
         return result.ToApplicationResult();
     }
 
-    private async Task<ApplicationUser?> FindUserAsync(Guid userId) =>
+    private async Task<ApplicationUser?> FindUserAsync(string userId) =>
         await _userManager.Users.FirstOrDefaultAsync(u => u.Id == userId);
 }

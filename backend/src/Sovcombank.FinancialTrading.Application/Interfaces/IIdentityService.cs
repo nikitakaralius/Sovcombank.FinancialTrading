@@ -4,13 +4,13 @@ namespace Sovcombank.FinancialTrading.Application.Interfaces;
 
 public interface IIdentityService
 {
-    Task<string?> GetUserNameAsync(Guid userId);
+    Task<string?> GetUserNameAsync(string userId);
 
-    Task<bool> IsIsInRoleAsync(Guid userId, string role);
+    Task<bool> IsIsInRoleAsync(string userId, string role);
 
-    Task<bool> AuthorizeAsync(Guid userId, string policyName);
+    Task<bool> AuthorizeAsync(string userId, string policyName);
 
-    Task<(Result Result, Guid UserId)> CreateUserAsync(string email, string phoneNumber, string password);
+    Task<(Result Result, string UserId)> CreateUserAsync(string email, string phoneNumber, string password);
 
-    Task<Result> DeleteUserAsync(Guid userId);
+    Task<Result> DeleteUserAsync(string userId);
 }
