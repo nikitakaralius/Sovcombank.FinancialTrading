@@ -16,6 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Sovcombank.FinancialTrading.Application\Sovcombank.FinancialTrading.Application.csproj" />
       <ProjectReference Include="..\Sovcombank.FinancialTrading.Domain\Sovcombank.FinancialTrading.Domain.csproj" />
     </ItemGroup>
 
