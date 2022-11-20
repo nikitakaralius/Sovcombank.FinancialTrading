@@ -1,5 +1,4 @@
 using System.Reflection;
-using MediatR;
 using Sovcombank.FinancialTrading.Application.Exceptions;
 using Sovcombank.FinancialTrading.Application.Interfaces;
 using Sovcombank.FinancialTrading.Application.Security;
