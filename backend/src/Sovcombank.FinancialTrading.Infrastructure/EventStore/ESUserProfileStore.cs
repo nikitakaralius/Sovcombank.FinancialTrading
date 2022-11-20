@@ -1,13 +1,14 @@
+using Sovcombank.FinancialTrading.Application.Interfaces;
 using Sovcombank.FinancialTrading.Infrastructure.Extensions;
 
 namespace Sovcombank.FinancialTrading.Infrastructure.EventStore;
 
-internal sealed class UserProfileStore : IUserProfileStore
+internal sealed class EsUserProfileStore : IUserProfileStore
 {
     private const int StreamSlice = 1024;
     private readonly IEventStoreConnection _connection;
 
-    public UserProfileStore(IEventStoreConnection connection) => _connection = connection;
+    public EsUserProfileStore(IEventStoreConnection connection) => _connection = connection;
 
     public async Task<bool> ExistsAsync(UserId userId)
     {
