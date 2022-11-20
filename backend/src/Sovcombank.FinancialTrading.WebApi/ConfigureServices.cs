@@ -8,6 +8,7 @@ internal static class ConfigureServices
     {
         services.AddHttpContextAccessor();
         services.AddSingleton<ICurrentUserService, CurrentUserService>();
+        services.AddControllers();
 
         return services;
     }
