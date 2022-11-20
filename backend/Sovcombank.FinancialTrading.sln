@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sovcombank.FinancialTrading
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sovcombank.FinancialTrading.Infrastructure", "src\Sovcombank.FinancialTrading.Infrastructure\Sovcombank.FinancialTrading.Infrastructure.csproj", "{A93D58DE-8C23-41B9-A14F-191E41FC1899}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sovcombank.FinancialTrading.Application", "src\Sovcombank.FinancialTrading.Application\Sovcombank.FinancialTrading.Application.csproj", "{080FC75B-DFE5-47E4-AB19-C3600F1BC00E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,7 @@ Global
 		{D9606E2D-280E-4C04-BEA4-0308F9579BBF} = {11AFD1B4-7FCB-464A-AF66-0F282241F368}
 		{3331D4F3-2F33-4BB6-A873-A67D4E3B3249} = {5BC897C6-2DDB-4539-8E77-28587E801E59}
 		{A93D58DE-8C23-41B9-A14F-191E41FC1899} = {11AFD1B4-7FCB-464A-AF66-0F282241F368}
+		{080FC75B-DFE5-47E4-AB19-C3600F1BC00E} = {11AFD1B4-7FCB-464A-AF66-0F282241F368}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D9606E2D-280E-4C04-BEA4-0308F9579BBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -45,5 +48,9 @@ Global
 		{A93D58DE-8C23-41B9-A14F-191E41FC1899}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A93D58DE-8C23-41B9-A14F-191E41FC1899}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A93D58DE-8C23-41B9-A14F-191E41FC1899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{080FC75B-DFE5-47E4-AB19-C3600F1BC00E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{080FC75B-DFE5-47E4-AB19-C3600F1BC00E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{080FC75B-DFE5-47E4-AB19-C3600F1BC00E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{080FC75B-DFE5-47E4-AB19-C3600F1BC00E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
