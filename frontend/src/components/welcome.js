@@ -15,7 +15,9 @@ export const Welcome = () => {
         <Image style={tw`w-40 h-50 ml-5`} source={mainLogo} />
       </View>
       <View style={tw`pt-25 items-center`}>
-        <TouchableOpacity style={tw`bg-[#EB3E1B] w-80 h-10 mb-5 rounded-2`}>
+        <TouchableOpacity
+          style={tw`bg-[#EB3E1B] w-80 h-10 mb-5 rounded-2`}
+          onPress={() => navigation.navigate('SignUpScreen')}>
           <Text style={tw`text-xl text-white m-auto`}>Стать клиентом</Text>
         </TouchableOpacity>
         <TouchableOpacity
