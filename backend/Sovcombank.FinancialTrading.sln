@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6C5FA42C-3D1F-41B9-96D6-2D9601B2C956}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{45CFD07D-F937-448C-ADFA-CFCC10023345}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "items", "items", "{B047A8C7-FF20-4DBF-9E2A-100D9B41FE4F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sovcombank.FinancialTrading.Api", "src\Sovcombank.FinancialTrading.Api\Sovcombank.FinancialTrading.Api.csproj", "{91B1D784-B567-460B-84A5-1A047AD8B768}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{91B1D784-B567-460B-84A5-1A047AD8B768} = {6C5FA42C-3D1F-41B9-96D6-2D9601B2C956}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91B1D784-B567-460B-84A5-1A047AD8B768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91B1D784-B567-460B-84A5-1A047AD8B768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91B1D784-B567-460B-84A5-1A047AD8B768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91B1D784-B567-460B-84A5-1A047AD8B768}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
